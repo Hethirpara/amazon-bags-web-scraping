@@ -14,7 +14,7 @@ ratings = []
 review_counts = []
 
 for page in range(1, 21):  # Scrape 20 pages
-    url = f"https://www.amazon.in/s?k=bags&page={page}&crid=2M096C61O4MLT&qid=1653308124&sprefix=ba%2Caps%2C283&ref=sr_pg_{page}"
+    url = f"https://www.amazon.inx/s?k=bags&page={page}&crid=2M096C61O4MLT&qid=1653308124&sprefix=ba%2Caps%2C283&ref=sr_pg_{page}"
     response = requests.get(url, headers=headers)
     soup = BeautifulSoup(response.text, 'html.parser')
     products = soup.find_all('div', {'data-component-type': 's-search-result'})
